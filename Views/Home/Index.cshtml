@@ -1,0 +1,20 @@
+﻿@model Profiler.Models.HomeViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <header>
+    <h1 class="display-4">Guest Book</h1>
+    @foreach (var comment in Model.Comments)
+        {
+            <div class = "row">
+                <div class = "col">
+                    @comment.Title - @comment.Name
+                </div>
+            </div>
+
+        }
+    </header>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
